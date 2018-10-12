@@ -1,6 +1,7 @@
 ---
 
-layout: post
+title: ELK set up
+author: pulkit
 tags: []
 
 ---
@@ -13,5 +14,5 @@ tags: []
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2ODMzODY0OCwyMDY3NTY0MzMwXX0=
+eyJoaXN0b3J5IjpbMTk4NjM3ODU2OSwyMDY3NTY0MzMwXX0=
 -->
