@@ -1,7 +1,7 @@
 ---
 
 title: ELK set up
-author: pulkit
+author: priyanka
 tags: []
 
 ---
@@ -14,5 +14,6 @@ tags: []
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk4NjM3ODU2OSwyMDY3NTY0MzMwXX0=
+eyJoaXN0b3J5IjpbMTEzOTkwMTI1MSwxOTg2Mzc4NTY5LDIwNj
+c1NjQzMzBdfQ==
 -->
