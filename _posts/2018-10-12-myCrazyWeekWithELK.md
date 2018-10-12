@@ -1,9 +1,6 @@
 
 ---
-
 layout: post
-title: the title goes here
-author: pulkit
 tags: []
 
 ---
@@ -15,5 +12,5 @@ tags: []
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODM0ODUxNjMxXX0=
+eyJoaXN0b3J5IjpbMjA2NzU2NDMzMF19
 -->
