@@ -20,15 +20,15 @@ Using this tool we can keep the logs in a specific location, from where we can r
 
 1. Run the following command to install,
 
-> apt-get install syslog-ng
+	> apt-get install syslog-ng
 
 After running the above command, you should be able to see the syslog service in `/etc` folder, as every service we install manually *(using apt-get)* is stored in the `/etc` folder
 `ls /etc/syslog-ng` 
   
  2. Configure syslog-ng tool as per your requirement by editing the file,
-> vim /etc/syslog-ng/syslog-ng.conf
+	> vim /etc/syslog-ng/syslog-ng.conf
     
-Append the following at the bottom of the file before the last line @include "/etc/syslog-ng/conf.d/*.conf"
+Append the following at the bottom of the file before the last line `@include "/etc/syslog-ng/conf.d/*.conf"`
 
 3. let's begin with understanding why we need logs and how the logging system works
 4. then introduction of ELK and after that the need of ELK stack
@@ -36,7 +36,7 @@ Append the following at the bottom of the file before the last line @include "/e
 > Written with [StackEdit](https://stackedit.io/).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzU1ODYyMjA1LC0xMTQwMjYwNTk5LDEyOD
-E0MTYxODksLTEwMDIwMzIyODEsMzU1MjA2ODA0LDExMzk5MDEy
-NTEsMTk4NjM3ODU2OSwyMDY3NTY0MzMwXX0=
+eyJoaXN0b3J5IjpbMTg1NzE2ODY4NywtMTE0MDI2MDU5OSwxMj
+gxNDE2MTg5LC0xMDAyMDMyMjgxLDM1NTIwNjgwNCwxMTM5OTAx
+MjUxLDE5ODYzNzg1NjksMjA2NzU2NDMzMF19
 -->
