@@ -26,7 +26,7 @@ After running the above command, you should be able to see the syslog service in
 2. Configure syslog-ng tool as per your requirement by editing the file,
 	> vim /etc/syslog-ng/syslog-ng.conf
    
-3.  
+1.  Now there are three main components to syslog-ng configuration tool
 Append the following at the bottom of the file before the last line `@include "/etc/syslog-ng/conf.d/*.conf"`
 
 . let's begin with understanding why we need logs and how the logging system works
@@ -98,7 +98,7 @@ That takes care of configuring syslog-ng
 > Written with [StackEdit](https://stackedit.io/).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5OTY1MTQyMiwtMTE0MDI2MDU5OSwxMj
+eyJoaXN0b3J5IjpbLTQwNTEwMjA2MywtMTE0MDI2MDU5OSwxMj
 gxNDE2MTg5LC0xMDAyMDMyMjgxLDM1NTIwNjgwNCwxMTM5OTAx
 MjUxLDE5ODYzNzg1NjksMjA2NzU2NDMzMF19
 -->
