@@ -28,7 +28,8 @@ After running the above command, you should be able to see the syslog service in
    
 3.  Now there are three main components to syslog-ng configuration tool.
  - Port that syslog-ng tool should be listening to
- - Filtering out logs from the service
+ - Filtering out logs from the docker service
+ - Storing logs to a specific path
 
 Append the following at the bottom of the file before the last line `@include "/etc/syslog-ng/conf.d/*.conf"`
 
@@ -101,7 +102,8 @@ That takes care of configuring syslog-ng
 > Written with [StackEdit](https://stackedit.io/).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjY0MTQ2NywtNDA1MTAyMDYzLC0xMTQwMj
-YwNTk5LDEyODE0MTYxODksLTEwMDIwMzIyODEsMzU1MjA2ODA0
-LDExMzk5MDEyNTEsMTk4NjM3ODU2OSwyMDY3NTY0MzMwXX0=
+eyJoaXN0b3J5IjpbMjEyNDA3MzAwMCwtNDA1MTAyMDYzLC0xMT
+QwMjYwNTk5LDEyODE0MTYxODksLTEwMDIwMzIyODEsMzU1MjA2
+ODA0LDExMzk5MDEyNTEsMTk4NjM3ODU2OSwyMDY3NTY0MzMwXX
+0=
 -->
