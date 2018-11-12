@@ -12,7 +12,7 @@ tags: []
 1. Logs that are generated in docker swarm we can viewed using the command,
 `docker service logs -f <service-name>`
 Docker stores container logs as JSON files by default, but it includes a built-in driver for logging to Syslog endpoints. Both JSON and Syslog messages are easy to parse, contain critical information about each container, and are supported by most logging services. 
-2. ShortcomingThe logs visible here for each and every service can also be stored into a specific location using the tool, ***syslog-ng*** . From where we can read the logs for multiple services at once.
+2. Going through the logs for each and service using the command mentioned above is a tediuos and time The logs visible here for each and every service can also be stored into a specific location using the tool, ***syslog-ng*** . From where we can read the logs for multiple services at once.
 3. Install the Syslog NG tool
     
 
@@ -28,7 +28,7 @@ Append the following at the bottom of the file before the last line @include "/e
 5. ELK set-up in swarm and how swarm works
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDAyNjA1OTksMTI4MTQxNjE4OSwtMT
-AwMjAzMjI4MSwzNTUyMDY4MDQsMTEzOTkwMTI1MSwxOTg2Mzc4
-NTY5LDIwNjc1NjQzMzBdfQ==
+eyJoaXN0b3J5IjpbMTE1NDk5MzE2MSwtMTE0MDI2MDU5OSwxMj
+gxNDE2MTg5LC0xMDAyMDMyMjgxLDM1NTIwNjgwNCwxMTM5OTAx
+MjUxLDE5ODYzNzg1NjksMjA2NzU2NDMzMF19
 -->
