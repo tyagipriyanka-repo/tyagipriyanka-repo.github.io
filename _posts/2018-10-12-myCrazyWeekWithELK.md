@@ -20,8 +20,9 @@ Using this tool we can keep the logs in a specific location, from where we can r
 
 Run the following command,    
 `apt-get install syslog-ng`
-Now you should be able to see the syslog service in `/etc` folder. 
-``   
+After running the above command, you should be able to see the syslog service in `/etc` folder, as every service we install manually *(using apt-get)* is stored in the `/etc` folder
+`ls /etc/syslog-ng` 
+  
    vim /etc/syslog-ng/syslog-ng.conf
     
 
@@ -32,7 +33,7 @@ Append the following at the bottom of the file before the last line @include "/e
 5. ELK set-up in swarm and how swarm works
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MDM4MTYzMzEsLTExNDAyNjA1OTksMT
+eyJoaXN0b3J5IjpbLTE1MzE2NjUyNjQsLTExNDAyNjA1OTksMT
 I4MTQxNjE4OSwtMTAwMjAzMjI4MSwzNTUyMDY4MDQsMTEzOTkw
 MTI1MSwxOTg2Mzc4NTY5LDIwNjc1NjQzMzBdfQ==
 -->
