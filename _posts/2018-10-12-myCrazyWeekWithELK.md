@@ -26,10 +26,12 @@ After running the above command, you should be able to see the syslog service in
 2. Configure syslog-ng tool as per your requirement by editing the file,
 	> vim /etc/syslog-ng/syslog-ng.conf
    
-1.  Now there are three main components to syslog-ng configuration tool
+3.  Now there are three main components to syslog-ng configuration tool.
+4. - 
+
 Append the following at the bottom of the file before the last line `@include "/etc/syslog-ng/conf.d/*.conf"`
 
-. let's begin with understanding why we need logs and how the logging system works
+~~. let's begin with understanding why we need logs and how the logging system works~~
 . then introduction of ELK and after that the need of ELK stack
 5 ELK set-up in swarm and how swarm works
 
@@ -98,7 +100,8 @@ That takes care of configuring syslog-ng
 > Written with [StackEdit](https://stackedit.io/).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwNTEwMjA2MywtMTE0MDI2MDU5OSwxMj
-gxNDE2MTg5LC0xMDAyMDMyMjgxLDM1NTIwNjgwNCwxMTM5OTAx
-MjUxLDE5ODYzNzg1NjksMjA2NzU2NDMzMF19
+eyJoaXN0b3J5IjpbMjAwNTA5MTU2LC00MDUxMDIwNjMsLTExND
+AyNjA1OTksMTI4MTQxNjE4OSwtMTAwMjAzMjI4MSwzNTUyMDY4
+MDQsMTEzOTkwMTI1MSwxOTg2Mzc4NTY5LDIwNjc1NjQzMzBdfQ
+==
 -->
