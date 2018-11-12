@@ -17,9 +17,12 @@ Going through the logs for each and service using the command mentioned above is
 Using this tool we can keep the logs in a specific location, from where we can read the logs for multiple services at once.
 
 ### Steps to install the Syslog-NG tool
-    
-	apt-get install syslog-ng
-    vim /etc/syslog-ng/syslog-ng.conf
+
+Run the following command,    
+`apt-get install syslog-ng`
+Now you should be able to see the syslog service in `/etc` folder. 
+``   
+   vim /etc/syslog-ng/syslog-ng.conf
     
 
 Append the following at the bottom of the file before the last line @include "/etc/syslog-ng/conf.d/*.conf"
@@ -29,7 +32,7 @@ Append the following at the bottom of the file before the last line @include "/e
 5. ELK set-up in swarm and how swarm works
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExODAwODQ1MzksLTExNDAyNjA1OTksMT
+eyJoaXN0b3J5IjpbLTE0MDM4MTYzMzEsLTExNDAyNjA1OTksMT
 I4MTQxNjE4OSwtMTAwMjAzMjI4MSwzNTUyMDY4MDQsMTEzOTkw
 MTI1MSwxOTg2Mzc4NTY5LDIwNjc1NjQzMzBdfQ==
 -->
