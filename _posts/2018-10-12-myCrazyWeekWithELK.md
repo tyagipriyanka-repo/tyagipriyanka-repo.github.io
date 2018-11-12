@@ -17,7 +17,6 @@ Going through the logs for each and service using the command mentioned above is
 Using this tool we can keep the logs in a specific location, from where we can read the logs for multiple services at once.
 
 ### Steps to install the Syslog-NG tool
-
 1. Run the following command to install,
 
 	> apt-get install syslog-ng
@@ -25,18 +24,82 @@ Using this tool we can keep the logs in a specific location, from where we can r
 After running the above command, you should be able to see the syslog service in `/etc` folder, as every service we install manually *(using apt-get)* is stored in the `/etc` folder
 `ls /etc/syslog-ng` 
   
- 2. Configure syslog-ng tool as per your requirement by editing the file,
+1. Configure syslog-ng tool as per your requirement by editing the file,
 	> vim /etc/syslog-ng/syslog-ng.conf
-    
+   
+1.  
 Append the following at the bottom of the file before the last line `@include "/etc/syslog-ng/conf.d/*.conf"`
 
-3. let's begin with understanding why we need logs and how the logging system works
-4. then introduction of ELK and after that the need of ELK stack
-5. ELK set-up in swarm and how swarm works
+. let's begin with understanding why we need logs and how the logging system works
+. then introduction of ELK and after that the need of ELK stack
+5 ELK set-up in swarm and how swarm works
+
+```
+1.    
+    
+
+# 1. Listening on port 601
+
+source s_network {
+
+network( transport(tcp) port(601));
+
+};
+
+  
+
+# 2. Using the local6 facility, filter the debug level logs
+
+# How did we tell docker to put logs on local6?
+
+# In the bnext_dev_stack.yml file:
+
+# logging:
+
+# driver: syslog
+
+# options:
+
+# syslog-address: "tcp://127.0.0.1:601"
+
+# syslog-facility: "local6"
+
+# tag: "docker-{{.Name}}/{{.ID}}"
+
+filter f_network { facility(local6) and not level(debug); };
+
+  
+
+# 3. Specify a place where we should put these filtered logs
+
+# it will put only the message coming from docker
+
+# which is in JSON format
+
+destination d_network { file("/var/log/bnext.log" template("${MSG}\n")); };
+
+  
+
+# 4. This puts the previous 3 together and executes them
+
+log { source(s_network); filter(f_network); destination(d_network); };
+
+2.  touch /var/log/bnext.log
+    
+3.  chown root:adm /var/log/bnext.log
+    
+4.  Restart
+    
+
+1.  service syslog-ng restart
+    
+
+That takes care of configuring syslog-ng
+```
 > Written with [StackEdit](https://stackedit.io/).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1NzE2ODY4NywtMTE0MDI2MDU5OSwxMj
-gxNDE2MTg5LC0xMDAyMDMyMjgxLDM1NTIwNjgwNCwxMTM5OTAx
-MjUxLDE5ODYzNzg1NjksMjA2NzU2NDMzMF19
+eyJoaXN0b3J5IjpbMjA1MDY3MTQ1LC0xMTQwMjYwNTk5LDEyOD
+E0MTYxODksLTEwMDIwMzIyODEsMzU1MjA2ODA0LDExMzk5MDEy
+NTEsMTk4NjM3ODU2OSwyMDY3NTY0MzMwXX0=
 -->
