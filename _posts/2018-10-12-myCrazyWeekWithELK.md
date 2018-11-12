@@ -18,16 +18,16 @@ Using this tool we can keep the logs in a specific location, from where we can r
 
 ### Steps to install the Syslog-NG tool
 
-1. Run the following command to ,
-`apt-get install syslog-ng`
+1. Run the following command to install,
+
+> apt-get install syslog-ng
+
 After running the above command, you should be able to see the syslog service in `/etc` folder, as every service we install manually *(using apt-get)* is stored in the `/etc` folder
 `ls /etc/syslog-ng` 
   
- 2. 
-
-     vim /etc/syslog-ng/syslog-ng.conf
+ 2. Configure syslog-ng tool as per your requirement by editing the file,
+> vim /etc/syslog-ng/syslog-ng.conf
     
-
 Append the following at the bottom of the file before the last line @include "/etc/syslog-ng/conf.d/*.conf"
 
 3. let's begin with understanding why we need logs and how the logging system works
@@ -36,7 +36,7 @@ Append the following at the bottom of the file before the last line @include "/e
 > Written with [StackEdit](https://stackedit.io/).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMzY0MjEyNzQsLTExNDAyNjA1OTksMT
-I4MTQxNjE4OSwtMTAwMjAzMjI4MSwzNTUyMDY4MDQsMTEzOTkw
-MTI1MSwxOTg2Mzc4NTY5LDIwNjc1NjQzMzBdfQ==
+eyJoaXN0b3J5IjpbMzU1ODYyMjA1LC0xMTQwMjYwNTk5LDEyOD
+E0MTYxODksLTEwMDIwMzIyODEsMzU1MjA2ODA0LDExMzk5MDEy
+NTEsMTk4NjM3ODU2OSwyMDY3NTY0MzMwXX0=
 -->
