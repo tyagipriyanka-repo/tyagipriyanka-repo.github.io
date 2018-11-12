@@ -27,7 +27,8 @@ After running the above command, you should be able to see the syslog service in
 	> vim /etc/syslog-ng/syslog-ng.conf
    
 3.  Now there are four main components to syslog-ng configuration tool.
- - Port that syslog-ng tool should be listening to
+ a. Port that syslog-ng tool should be listening to, configured as:
+	 `source var_name { network( transport(tcp) port(601)); };`
  - Filtering out logs from the docker service
  - Storing logs to a specific path
  - Combining the above three actions into one to generate the output
@@ -103,8 +104,8 @@ That takes care of configuring syslog-ng
 > Written with [StackEdit](https://stackedit.io/).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNDMzOTU5MTQsMjEyNDA3MzAwMCwtND
-A1MTAyMDYzLC0xMTQwMjYwNTk5LDEyODE0MTYxODksLTEwMDIw
-MzIyODEsMzU1MjA2ODA0LDExMzk5MDEyNTEsMTk4NjM3ODU2OS
-wyMDY3NTY0MzMwXX0=
+eyJoaXN0b3J5IjpbODU2NTIxNzg3LDIxMjQwNzMwMDAsLTQwNT
+EwMjA2MywtMTE0MDI2MDU5OSwxMjgxNDE2MTg5LC0xMDAyMDMy
+MjgxLDM1NTIwNjgwNCwxMTM5OTAxMjUxLDE5ODYzNzg1NjksMj
+A2NzU2NDMzMF19
 -->
