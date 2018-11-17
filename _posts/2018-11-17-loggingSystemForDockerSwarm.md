@@ -39,6 +39,7 @@ After running the above command, you should be able to see the syslog service in
 	We can use upto port 604, eventhough we can mention the same port number for all the services we require the logs for, across all docker-compose.yml files.
 
  - Filtering out logs from the docker service
+	 There are "facilities" called local0 to local7, where `facility` is the name of the (let's call it) "component" of the system, such as kernel, authentication, and so on
 	 The facilities `local0` to `local7` are "custom" unused facilities that syslog provides for the user. If a developer create an application and wants to make it log to syslog, or if you want to redirect the output of anything to syslog (for example, Apache logs), you can choose to send it to any of the `local#` facilities. Then, you can use `/etc/syslog.conf` (or `/etc/rsyslog.conf`) to save the logs being sent to that `local#` to a file, or to send it to a remote server.
  - Storing logs to a specific path
  - Combining the above three actions into one to generate the output
@@ -114,6 +115,6 @@ That takes care of configuring syslog-ng
 > Written with [StackEdit](https://stackedit.io/).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1MjkxNzc3NSwtNDcyMDU4OTA5LC0xNz
+eyJoaXN0b3J5IjpbLTMxMjQ0MzkyMCwtNDcyMDU4OTA5LC0xNz
 U3MDkxMTAxLDQ2MDc3MTg3MF19
 -->
