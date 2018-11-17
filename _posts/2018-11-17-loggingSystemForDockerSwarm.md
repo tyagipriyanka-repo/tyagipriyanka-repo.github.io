@@ -29,20 +29,21 @@ After running the above command, you should be able to see the syslog service in
    
 3.  Now all that remains is to configure the syslog-ng tool as per our requirement.
 
-### Co
-there are four main components to syslog-ng configuration tool.
- - Port that syslog-ng tool should be listening to, configured as:
+### Configure Syslog-NG tool
+There are four main components to syslog-ng configuration tool.
+ 1. Port that syslog-ng tool should be listening to, configured as:
 	> source var_name { network( transport(tcp) port(601)); };
 
 	**Note:** 
 	Looking inside syslog-ng.conf file, observe that syslog-ng service listens to the new syslog protocol on TCP port 601, and stores any incoming log messages in a file called `/var/log/syslog`.
 	
-	There are 6 ports available with syslog-ng tool, 
+	- There are 6 ports available with syslog-ng tool, 
 		 i.e. *601, 602,603,604,605,606*.
-	We can use upto port 604, eventhough we can mention the same port number for all the services we require the logs for, across all docker-compose.yml files.
+	- We can use upto port 604, eventhough we can mention the same port number for all the services we require the logs for, across all docker-compose.yml files.
 
- -  Interaction between syslog-ng and docker service
-	 There are **facilities** called `local0` to `local7`, where `facility` is the name of the (let's call it) "component" of the system, such as kernel, authentication, and so on.
+1. Interaction between syslog-ng and docker service
+	 
+	 There are **facilities** called `local0` to `local7`. where `facility` is the name of the (let's call it) "component" of the system, such as kernel, authentication, and so on.
 	 The facilities `local0` to `local7` are ***custom*** unused facilities that syslog provides for the user. Now we want to make the docker services to log to syslog,  hence we can choose to send it to any of the `local#` facilities. 
 	 Then, we can use `/etc/syslog.conf` (or `/etc/rsyslog.conf`) to save the logs being sent to that `local#` to a file, or to send it to a remote server.
  - Storing logs to a specific path
@@ -119,6 +120,6 @@ That takes care of configuring syslog-ng
 > Written with [StackEdit](https://stackedit.io/).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg3MzEyMTY1OCwtNDcyMDU4OTA5LC0xNz
+eyJoaXN0b3J5IjpbMTgxNTg5MjUzMywtNDcyMDU4OTA5LC0xNz
 U3MDkxMTAxLDQ2MDc3MTg3MF19
 -->
