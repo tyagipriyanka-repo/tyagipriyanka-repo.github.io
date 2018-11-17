@@ -9,7 +9,8 @@ tags: []
 ## Log system set-up basics with docker-swarm
 
 ### How the logging system works in docker-swarm
-Logs that are generated in docker swarm we can viewed using the command,
+We know that logs for docker services that are generated in docker swarm, can be viewed using the command,
+
 `docker service logs -f <service-name>`
 
 Docker stores container logs as JSON files by default, but it includes a built-in driver for logging to Syslog endpoints. Both JSON and Syslog messages are easy to parse, contain critical information about each container, and are supported by most logging services. 
@@ -107,8 +108,8 @@ That takes care of configuring syslog-ng
 > Written with [StackEdit](https://stackedit.io/).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTM4NjgxNTgsLTE1OTgyMTkxLDIxMj
-QwNzMwMDAsLTQwNTEwMjA2MywtMTE0MDI2MDU5OSwxMjgxNDE2
-MTg5LC0xMDAyMDMyMjgxLDM1NTIwNjgwNCwxMTM5OTAxMjUxLD
-E5ODYzNzg1NjksMjA2NzU2NDMzMF19
+eyJoaXN0b3J5IjpbMTc3MzQyNjEwOCwtMjAxMzg2ODE1OCwtMT
+U5ODIxOTEsMjEyNDA3MzAwMCwtNDA1MTAyMDYzLC0xMTQwMjYw
+NTk5LDEyODE0MTYxODksLTEwMDIwMzIyODEsMzU1MjA2ODA0LD
+ExMzk5MDEyNTEsMTk4NjM3ODU2OSwyMDY3NTY0MzMwXX0=
 -->
