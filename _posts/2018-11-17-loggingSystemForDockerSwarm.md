@@ -39,6 +39,7 @@ After running the above command, you should be able to see the syslog service in
 	We can use upto port 604, eventhough we can mention the same port number for all the services we require the logs for, across all docker-compose.yml files.
 
  - Filtering out logs from the docker service
+	 
  - Storing logs to a specific path
  - Combining the above three actions into one to generate the output
 
@@ -113,6 +114,6 @@ That takes care of configuring syslog-ng
 > Written with [StackEdit](https://stackedit.io/).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExNDI2MTQ1NSwtMTc1NzA5MTEwMSw0Nj
+eyJoaXN0b3J5IjpbLTQ3MjA1ODkwOSwtMTc1NzA5MTEwMSw0Nj
 A3NzE4NzBdfQ==
 -->
