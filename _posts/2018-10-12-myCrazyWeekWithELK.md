@@ -11,6 +11,7 @@ tags: []
 ### How the logging system works in docker-swarm
 Logs that are generated in docker swarm we can viewed using the command,
 `docker service logs -f <service-name>`
+
 Docker stores container logs as JSON files by default, but it includes a built-in driver for logging to Syslog endpoints. Both JSON and Syslog messages are easy to parse, contain critical information about each container, and are supported by most logging services. 
 
 Going through the logs for each and service using the command mentioned above is a tediuos and time consuming task. Hence, the other way t loo have logs visible for each and every service or a bunch of selective services can use the tool, ***syslog-ng*** . 
@@ -20,8 +21,8 @@ Using this tool we can keep the logs in a specific location, from where we can r
 1. Run the following command to install,
 	> apt-get install syslog-ng
 
-After running the above command, you should be able to see the syslog service in `/etc` folder, as every service we install manually *(using apt-get)* is stored in the `/etc` folder
-`ls /etc/syslog-ng` 
+After running the above command, you should be able to see the syslog service in `/etc` folder, as every service we install manually *(using apt-get)* is stored in the `/etc` folder.
+	> ls /etc/syslog-ng
 
 2. Configure syslog-ng tool as per your requirement by editing the file,
 	> vim /etc/syslog-ng/syslog-ng.conf
@@ -107,8 +108,8 @@ That takes care of configuring syslog-ng
 > Written with [StackEdit](https://stackedit.io/).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1OTgyMTkxLDIxMjQwNzMwMDAsLTQwNT
-EwMjA2MywtMTE0MDI2MDU5OSwxMjgxNDE2MTg5LC0xMDAyMDMy
-MjgxLDM1NTIwNjgwNCwxMTM5OTAxMjUxLDE5ODYzNzg1NjksMj
-A2NzU2NDMzMF19
+eyJoaXN0b3J5IjpbLTEyMTYyNDc3MjksLTE1OTgyMTkxLDIxMj
+QwNzMwMDAsLTQwNTEwMjA2MywtMTE0MDI2MDU5OSwxMjgxNDE2
+MTg5LC0xMDAyMDMyMjgxLDM1NTIwNjgwNCwxMTM5OTAxMjUxLD
+E5ODYzNzg1NjksMjA2NzU2NDMzMF19
 -->
