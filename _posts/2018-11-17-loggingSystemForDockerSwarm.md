@@ -31,9 +31,11 @@ After running the above command, you should be able to see the syslog service in
  a. Port that syslog-ng tool should be listening to, configured as:
 	> source var_name { network( transport(tcp) port(601)); };
 
-**Note:** There are 6 ports available with syslog-ng tool, 
+**Note:** 
+Looking inside syslog-ng.conf file, observe that syslog-ng service listens to the new syslog protocol on TCP port 601, and stores any incoming log messages in a file called `/var/log/syslog`.
+There are 6 ports available with syslog-ng tool, 
 	 i.e. *601, 602,603,604,605,606*.
-	 We can use upto 
+We can use upto 
  - Filtering out logs from the docker service
  - Storing logs to a specific path
  - Combining the above three actions into one to generate the output
@@ -109,5 +111,5 @@ That takes care of configuring syslog-ng
 > Written with [StackEdit](https://stackedit.io/).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDYwNzcxODcwXX0=
+eyJoaXN0b3J5IjpbLTM5MTc2NzI1MSw0NjA3NzE4NzBdfQ==
 -->
