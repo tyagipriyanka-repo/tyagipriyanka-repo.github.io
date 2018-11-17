@@ -22,15 +22,16 @@ Using this tool we can keep the logs in a specific location, from where we can r
 1. Run the following command to install,
 	> apt-get install syslog-ng
 
-After running the above command, you should be able to see the syslog service in `/etc` folder with service name as **syslog-ng**, as every service we install manually *(using apt-get)* is stored in the `/etc` folder.
+After running the above command, you should be able to see the syslog service in `/etc` folder with service name as **syslog-ng**, as every service we install manually *(using apt-get)*** is stored in the `/etc` folder.
 
 2. Configure syslog-ng tool as per your requirement by editing the file,
 	> vim /etc/syslog-ng/syslog-ng.conf
    
 3.  Now there are four main components to syslog-ng configuration tool.
  a. Port that syslog-ng tool should be listening to, configured as:
-	 `source var_name { network( transport(tcp) port(601)); };`
-	 There are 6 ports available with syslog-ng tool, 
+	> source var_name { network( transport(tcp) port(601)); };
+
+There are 6 ports available with syslog-ng tool, 
 	 i.e. *601, 602,603,604,605,606*.
 	 We can use upto 
  - Filtering out logs from the docker service
@@ -108,5 +109,5 @@ That takes care of configuring syslog-ng
 > Written with [StackEdit](https://stackedit.io/).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYwNTc1MDg1NF19
+eyJoaXN0b3J5IjpbLTE1NjAyNjI2OThdfQ==
 -->
