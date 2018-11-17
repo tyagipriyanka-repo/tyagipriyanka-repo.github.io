@@ -27,7 +27,10 @@ After running the above command, you should be able to see the syslog service in
 2. Configure syslog-ng tool as per your requirement by editing the file,
 	> vim /etc/syslog-ng/syslog-ng.conf
    
-3.  Now there are four main components to syslog-ng configuration tool.
+3.  Now all that remains is to configure the syslog-ng tool as per our requirement.
+
+### Co
+there are four main components to syslog-ng configuration tool.
  - Port that syslog-ng tool should be listening to, configured as:
 	> source var_name { network( transport(tcp) port(601)); };
 
@@ -40,7 +43,8 @@ After running the above command, you should be able to see the syslog service in
 
  -  Interaction between syslog-ng and docker service
 	 There are **facilities** called `local0` to `local7`, where `facility` is the name of the (let's call it) "component" of the system, such as kernel, authentication, and so on.
-	 The facilities `local0` to `local7` are ***custom*** unused facilities that syslog provides for the user. Now we want to make the docker services to log to syslog, or if you want to redirect the output of anything to syslog (for example, Apache logs), you can choose to send it to any of the `local#` facilities. Then, you can use `/etc/syslog.conf` (or `/etc/rsyslog.conf`) to save the logs being sent to that `local#` to a file, or to send it to a remote server.
+	 The facilities `local0` to `local7` are ***custom*** unused facilities that syslog provides for the user. Now we want to make the docker services to log to syslog,  hence we can choose to send it to any of the `local#` facilities. 
+	 Then, we can use `/etc/syslog.conf` (or `/etc/rsyslog.conf`) to save the logs being sent to that `local#` to a file, or to send it to a remote server.
  - Storing logs to a specific path
  - Combining the above three actions into one to generate the output
 
@@ -115,6 +119,6 @@ That takes care of configuring syslog-ng
 > Written with [StackEdit](https://stackedit.io/).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0OTgyMjI1NjQsLTQ3MjA1ODkwOSwtMT
-c1NzA5MTEwMSw0NjA3NzE4NzBdfQ==
+eyJoaXN0b3J5IjpbLTg3MzEyMTY1OCwtNDcyMDU4OTA5LC0xNz
+U3MDkxMTAxLDQ2MDc3MTg3MF19
 -->
