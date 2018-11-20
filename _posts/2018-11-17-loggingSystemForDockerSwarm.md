@@ -33,7 +33,8 @@ Using this tool we can keep the logs in a specific location, from where we can r
 There are four main components to syslog-ng configuration tool.
 What needs to be appended is mentioned along with steps, we can append the following at the bottom of the file before the last line `@include "/etc/syslog-ng/conf.d/*.conf"`
 
-**Port that syslog-ng tool should be listening to, configured as:**
+<h3>**Port that syslog-ng tool should be listening to, configured as:**</h3>
+
 > source var_name { network( transport(tcp) port(601)); };
 
 - 	Looking inside syslog-ng.conf file, observe that syslog-ng service listens to the new syslog protocol on TCP port 601, and stores any incoming log messages in a file called `/var/log/syslog`.
@@ -94,7 +95,7 @@ Tag option specifies how to format a tag that identifies the container’s log m
 All these steps takes care of configuring syslog-ng. Now we can see the logs being generated for the docker services using the command,
 > tail -f /var/log/file_name.log
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc0ODU2NjY4NywtNjMwNTAyNTQzLDEzMj
+eyJoaXN0b3J5IjpbLTcyNjEwMTM3OCwtNjMwNTAyNTQzLDEzMj
 g3OTIzNTYsLTE0NDg2OTI5MjQsMTQyNDI0ODYxNCwtNzY0NzM3
 NTY0LC0xOTEwOTc3MTE5LC0xMDIyMjA1MDA1LDEwMTIyNTk1MT
 AsLTExMjEzOTE3MjgsNjE4MzY2MDgwLC04ODA1NjE5ODcsLTQ3
