@@ -1,3 +1,4 @@
+
 ---
 
 title: End2End automation tests for AngularJS with protractor
@@ -6,9 +7,10 @@ tags: []
 
 ---
 
+## Protractor
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjM5OTE5MTEsNzMwOTk4MTE2LDU4Mz
-YwNjEzN119
+eyJoaXN0b3J5IjpbLTQ5NjMzMzk3OSw3MzA5OTgxMTYsNTgzNj
+A2MTM3XX0=
 -->
