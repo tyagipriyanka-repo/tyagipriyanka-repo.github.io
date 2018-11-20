@@ -49,17 +49,17 @@ What needs to be appended is mentioned along with steps, we can append the follo
 	 
 -	 The facilities `local0` to `local7` are ***custom*** unused facilities that syslog provides for the user. Now we want to make the docker services to log to syslog,  hence we can choose to send it to any of the `local#` facilities. 
 	 - Most commonly used facility is **local6**
-		 > filter <var_name> { facility(local6) and not level(debug); };
+		 > filter var_name { facility(local6) and not level(debug); };
 	 
 -	 Then, we can use `/etc/syslog-ng/syslog-ng.conf` to save the logs being sent to that `local#` to a file, or to send it to a remote server.
  
 **Storing logs to a specific location**
  - Specify a place where we should put these filtered logs, it will put only the message coming from docker, which is in JSON format.
-	>  destination <var_name> { file("/var/log/<file_name>.log" template("${MSG}\n")); };
+	>  destination var_name { file("/var/log/file_name.log" template("${MSG}\n")); };
 
 **Combining the above three actions into one to generate the output**
 - Now the final step is to start logging using the above three steps.
-	> log { source(<var_name>); filter(<var_name>); destination(<var_name>); };
+	> log { source(var_name); filter(var_name); destination(var_name); };
 
 	**Note:**
 	For each port hat we use we need to keep separate variable names for source, filter and destination. As separate ports should be aligned to different facilities.
@@ -85,18 +85,18 @@ Tag option specifies how to format a tag that identifies the container’s log m
 ### Start the syslog-ng service
 
 1.  We need to create the file we've mentioned for the logs to store
-	> touch /var/log/<file_name>.log  
+	> touch /var/log/file_name.log  
 2.  Change the file owner and group information
-	> chown root:adm /var/log/<file_name>.log
+	> chown root:adm /var/log/file_name.log
 3.  Restart the syslog-ng service
 	>  service syslog-ng restart
 
 All these steps takes care of configuring syslog-ng. Now we can see the logs being generated for the docker services using the command,
-> tail -f /var/log/<file_name>.log
+> tail -f /var/log/file_name.log
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3OTgwMjE2ODMsLTYzMDUwMjU0MywxMz
-I4NzkyMzU2LC0xNDQ4NjkyOTI0LDE0MjQyNDg2MTQsLTc2NDcz
-NzU2NCwtMTkxMDk3NzExOSwtMTAyMjIwNTAwNSwxMDEyMjU5NT
-EwLC0xMTIxMzkxNzI4LDYxODM2NjA4MCwtODgwNTYxOTg3LC00
-NzIwNTg5MDksLTE3NTcwOTExMDEsNDYwNzcxODcwXX0=
+eyJoaXN0b3J5IjpbLTc0ODU2NjY4NywtNjMwNTAyNTQzLDEzMj
+g3OTIzNTYsLTE0NDg2OTI5MjQsMTQyNDI0ODYxNCwtNzY0NzM3
+NTY0LC0xOTEwOTc3MTE5LC0xMDIyMjA1MDA1LDEwMTIyNTk1MT
+AsLTExMjEzOTE3MjgsNjE4MzY2MDgwLC04ODA1NjE5ODcsLTQ3
+MjA1ODkwOSwtMTc1NzA5MTEwMSw0NjA3NzE4NzBdfQ==
 -->
