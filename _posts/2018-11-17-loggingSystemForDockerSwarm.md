@@ -53,9 +53,13 @@ There are four main components to syslog-ng configuration tool.
 	 >  destination <var_name> { file("/var/log/bnext.log" template("${MSG}\n")); };
 
  1. Combining the above three actions into one to generate the output
-- Now the final step is to start logging using the above three steps.
-	> log { source(s_network); filter(f_network); destination(d_network); };
+	- Now the final step is to start logging using the above three steps.
+	> log { source(<var_name>); filter(<var_name>); destination(<var_name>); };
 
+	**Note:**
+	For each port hat we use we need to keep separate varia
+	 
+	
 Append the following at the bottom of the file before the last line `@include "/etc/syslog-ng/conf.d/*.conf"`
 
 ~~. let's begin with understanding why we need logs and how the logging system works~~
@@ -127,7 +131,7 @@ That takes care of configuring syslog-ng
 > Written with [StackEdit](https://stackedit.io/).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjM0ODA3NTYsNjE4MzY2MDgwLC04OD
-A1NjE5ODcsLTQ3MjA1ODkwOSwtMTc1NzA5MTEwMSw0NjA3NzE4
-NzBdfQ==
+eyJoaXN0b3J5IjpbLTUwODI0MzUzMiw2MTgzNjYwODAsLTg4MD
+U2MTk4NywtNDcyMDU4OTA5LC0xNzU3MDkxMTAxLDQ2MDc3MTg3
+MF19
 -->
