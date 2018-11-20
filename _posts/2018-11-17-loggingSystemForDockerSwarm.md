@@ -31,6 +31,7 @@ After running the above command, you should be able to see the syslog service in
 
 ### Configure Syslog-NG tool
 There are four main components to syslog-ng configuration tool.
+The command mentioned with each  should be append the following at the bottom of the file before the last line `@include "/etc/syslog-ng/conf.d/*.conf"`
  1. Port that syslog-ng tool should be listening to, configured as:
 	> source <var_name> { network( transport(tcp) port(601)); };
 
@@ -57,10 +58,10 @@ There are four main components to syslog-ng configuration tool.
 	> log { source(<var_name>); filter(<var_name>); destination(<var_name>); };
 
 	**Note:**
-	For each port hat we use we need to keep separate varia
+	For each port hat we use we need to keep separate variable names for source, filter and destination. As separate ports should be aligned to different facilities.
 	 
 	
-Append the following at the bottom of the file before the last line `@include "/etc/syslog-ng/conf.d/*.conf"`
+
 
 ~~. let's begin with understanding why we need logs and how the logging system works~~
 . then introduction of ELK and after that the need of ELK stack
@@ -131,7 +132,7 @@ That takes care of configuring syslog-ng
 > Written with [StackEdit](https://stackedit.io/).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUwODI0MzUzMiw2MTgzNjYwODAsLTg4MD
+eyJoaXN0b3J5IjpbMTYwOTkxOTU4NCw2MTgzNjYwODAsLTg4MD
 U2MTk4NywtNDcyMDU4OTA5LC0xNzU3MDkxMTAxLDQ2MDc3MTg3
 MF19
 -->
