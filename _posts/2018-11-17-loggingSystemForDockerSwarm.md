@@ -87,9 +87,9 @@ Tag option specifies how to format a tag that identifies the container’s log m
 	> chown root:adm /var/log/<file_name>.log
 3.  Restart the syslog-ng service
 	>  service syslog-ng restart
-    
 
-That takes care of configuring syslog-ng
+All these steps takes care of configuring syslog-ng. Now we can see the logs being generated for the docker services using the command,
+> 
 
 ```
 1.    
@@ -146,7 +146,7 @@ log { source(s_network); filter(f_network); destination(d_network); };
 > Written with [StackEdit](https://stackedit.io/).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTk0Nzg2NDYsLTEwMjIyMDUwMDUsMT
+eyJoaXN0b3J5IjpbLTE0ODg3MDg3NjcsLTEwMjIyMDUwMDUsMT
 AxMjI1OTUxMCwtMTEyMTM5MTcyOCw2MTgzNjYwODAsLTg4MDU2
 MTk4NywtNDcyMDU4OTA5LC0xNzU3MDkxMTAxLDQ2MDc3MTg3MF
 19
