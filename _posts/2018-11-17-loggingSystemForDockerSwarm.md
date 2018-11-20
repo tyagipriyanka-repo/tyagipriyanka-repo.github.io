@@ -75,9 +75,9 @@ logging:
 **Note:**
 So we know syslog facility is the facility we chose from `local0` to `local6`, syslog address is the port where syslog-ng service will be listening, i.e. 601.
 Tag option specifies how to format a tag that identifies the container’s log messages. By default, the system uses the first 12 characters of the container ID.
-- `{{.ID}}`: The first 12 characters of the container ID
-- `{{.ImageName}}`: The name of the image used by the container
-- `{{.Name}}`: The container name
+- `.ID`: The first 12 characters of the container ID
+- `.ImageName`: The name of the image used by the container
+- `.Name`: The container name
 
 ### Start the syslog-ng service
 
@@ -91,8 +91,8 @@ Tag option specifies how to format a tag that identifies the container’s log m
 All these steps takes care of configuring syslog-ng. Now we can see the logs being generated for the docker services using the command,
 > tail -f /var/log/<file_name>.log
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQzNTUxNTYxNSwtMTAyMjIwNTAwNSwxMD
-EyMjU5NTEwLC0xMTIxMzkxNzI4LDYxODM2NjA4MCwtODgwNTYx
-OTg3LC00NzIwNTg5MDksLTE3NTcwOTExMDEsNDYwNzcxODcwXX
-0=
+eyJoaXN0b3J5IjpbLTE5MTA5NzcxMTksLTEwMjIyMDUwMDUsMT
+AxMjI1OTUxMCwtMTEyMTM5MTcyOCw2MTgzNjYwODAsLTg4MDU2
+MTk4NywtNDcyMDU4OTA5LC0xNzU3MDkxMTAxLDQ2MDc3MTg3MF
+19
 -->
