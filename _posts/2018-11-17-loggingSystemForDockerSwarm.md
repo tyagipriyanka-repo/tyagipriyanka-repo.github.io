@@ -6,7 +6,7 @@ tags: []
 
 ---
 
-## Log system set-up basics with docker-swarm
+## Loggi set-up basics with docker-swarm
 
 ### How the logging system works in docker-swarm
 We know that logs for docker services that are generated in docker swarm, can be viewed using the command,
@@ -91,8 +91,8 @@ Tag option specifies how to format a tag that identifies the container’s log m
 All these steps takes care of configuring syslog-ng. Now we can see the logs being generated for the docker services using the command,
 > tail -f /var/log/<file_name>.log
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MTA5NzcxMTksLTEwMjIyMDUwMDUsMT
-AxMjI1OTUxMCwtMTEyMTM5MTcyOCw2MTgzNjYwODAsLTg4MDU2
-MTk4NywtNDcyMDU4OTA5LC0xNzU3MDkxMTAxLDQ2MDc3MTg3MF
-19
+eyJoaXN0b3J5IjpbMTYyNTg3ODQ4OCwtMTkxMDk3NzExOSwtMT
+AyMjIwNTAwNSwxMDEyMjU5NTEwLC0xMTIxMzkxNzI4LDYxODM2
+NjA4MCwtODgwNTYxOTg3LC00NzIwNTg5MDksLTE3NTcwOTExMD
+EsNDYwNzcxODcwXX0=
 -->
