@@ -115,22 +115,12 @@ destination d_network { file("/var/log/bnext.log" template("${MSG}\n")); };
 
 log { source(s_network); filter(f_network); destination(d_network); };
 
-2.  touch /var/log/bnext.log
-    
-3.  chown root:adm /var/log/bnext.log
-    
-4.  Restart
-    
 
-1.  service syslog-ng restart
-    
-
-That takes care of configuring syslog-ng
 ```
 > Written with [StackEdit](https://stackedit.io/).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxMjI1OTUxMCwtMTEyMTM5MTcyOCw2MT
-gzNjYwODAsLTg4MDU2MTk4NywtNDcyMDU4OTA5LC0xNzU3MDkx
-MTAxLDQ2MDc3MTg3MF19
+eyJoaXN0b3J5IjpbMzg0NjEzNTYxLDEwMTIyNTk1MTAsLTExMj
+EzOTE3MjgsNjE4MzY2MDgwLC04ODA1NjE5ODcsLTQ3MjA1ODkw
+OSwtMTc1NzA5MTEwMSw0NjA3NzE4NzBdfQ==
 -->
