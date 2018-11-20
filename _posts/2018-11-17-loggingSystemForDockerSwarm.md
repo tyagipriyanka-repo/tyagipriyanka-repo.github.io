@@ -8,7 +8,7 @@ tags: []
 
 ## Log set-up basics in docker-swarm with Syslog-NG
 
-### How the logging system works in docker-swarm
+### A. How the logging system works in docker-swarm
 We know that logs for docker services that are generated in docker swarm, can be viewed using the command,
 
 `docker service logs -f <service-name>`
@@ -18,7 +18,7 @@ Docker stores container logs as JSON files by default, but it includes a built-i
 Going through the logs for each and service using the command mentioned above is a tedious and time consuming task. Hence, the other way to have logs visible for each and every service or a bunch of selective services, we can use the tool, ***syslog-ng*** . 
 Using this tool we can keep the logs in a specific location, from where we can read the logs for multiple services at once.
 
-### Steps to install the Syslog-NG tool
+### B. Steps to install the Syslog-NG tool
 1. Run the following command to install,
 	> apt-get install syslog-ng
 
@@ -29,7 +29,7 @@ Using this tool we can keep the logs in a specific location, from where we can r
    
 3.  Now all that remains is to configure the syslog-ng tool as per our requirement.
 
-### Configure Syslog-NG tool
+### C. Configure Syslog-NG tool
 There are four main components to syslog-ng configuration tool.
 What needs to be appended is mentioned along with steps, we can append the following at the bottom of the file before the last line `@include "/etc/syslog-ng/conf.d/*.conf"`
 
@@ -65,7 +65,7 @@ What needs to be appended is mentioned along with steps, we can append the follo
 	**Note:**
 	For each port hat we use we need to keep separate variable names for source, filter and destination. As separate ports should be aligned to different facilities.
 	 
-### Configuration for docker services
+### D. Configuration for docker services
  - Now we need to tell our docker services to interact wth syslog-ng on the configured port and the filtered out facility.
  - Docker privide us with the option of `logging`. Following is the configuration need to be placed for the docker services we want to view the logs for, in the `docker_stack.yml` file
 ```
@@ -83,7 +83,7 @@ Tag option specifies how to format a tag that identifies the container’s log m
 - `.ImageName`: The name of the image used by the container
 - `.Name`: The container name
 
-### Start the syslog-ng service
+### E. Start the syslog-ng service
 
 1.  We need to create the file we've mentioned for the logs to store
 	> touch /var/log/file_name.log  
@@ -95,9 +95,9 @@ Tag option specifies how to format a tag that identifies the container’s log m
 All these steps takes care of configuring syslog-ng. Now we can see the logs being generated for the docker services using the command,
 > tail -f /var/log/file_name.log
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4Mjk3NzQ4NjEsLTYzMDUwMjU0MywxMz
-I4NzkyMzU2LC0xNDQ4NjkyOTI0LDE0MjQyNDg2MTQsLTc2NDcz
-NzU2NCwtMTkxMDk3NzExOSwtMTAyMjIwNTAwNSwxMDEyMjU5NT
-EwLC0xMTIxMzkxNzI4LDYxODM2NjA4MCwtODgwNTYxOTg3LC00
-NzIwNTg5MDksLTE3NTcwOTExMDEsNDYwNzcxODcwXX0=
+eyJoaXN0b3J5IjpbMTI4NTg3MzMxNiwtNjMwNTAyNTQzLDEzMj
+g3OTIzNTYsLTE0NDg2OTI5MjQsMTQyNDI0ODYxNCwtNzY0NzM3
+NTY0LC0xOTEwOTc3MTE5LC0xMDIyMjA1MDA1LDEwMTIyNTk1MT
+AsLTExMjEzOTE3MjgsNjE4MzY2MDgwLC04ODA1NjE5ODcsLTQ3
+MjA1ODkwOSwtMTc1NzA5MTEwMSw0NjA3NzE4NzBdfQ==
 -->
