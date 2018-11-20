@@ -32,7 +32,7 @@ Using this tool we can keep the logs in a specific location, from where we can r
 ### Configure Syslog-NG tool
 There are four main components to syslog-ng configuration tool.
 What needs to be appended is mentioned along with steps, we can append the following at the bottom of the file before the last line `@include "/etc/syslog-ng/conf.d/*.conf"`
-1. Port that syslog-ng tool should be listening to, configured as:
+1. **Port that syslog-ng tool should be listening to, configured as:**
 	> source <var_name> { network( transport(tcp) port(601)); };
 
 	Looking inside syslog-ng.conf file, observe that syslog-ng service listens to the new syslog protocol on TCP port 601, and stores any incoming log messages in a file called `/var/log/syslog`.
@@ -42,7 +42,7 @@ What needs to be appended is mentioned along with steps, we can append the follo
 		 i.e. *601, 602,603,604,605,606*.
 	We can use upto port 604, keeping in mind we can mention the same port number for all the services that we require the logs for, across all docker-compose.yml files.
 
-2. Interaction between syslog-ng and docker service by filtering out the logs
+2. **Interaction between syslog-ng and docker service by filtering out the logs**
 	 There are **facilities** called `local0` to `local7`. 
 	 (where `facility` is the name of the ***component*** of the system, such as kernel, authentication, and so on.)
 	 
@@ -52,11 +52,11 @@ What needs to be appended is mentioned along with steps, we can append the follo
 	 
 	 Then, we can use `/etc/syslog-ng/syslog-ng.conf` to save the logs being sent to that `local#` to a file, or to send it to a remote server.
  
-4.  Storing logs to a specific location
+3.  **Storing logs to a specific location**
 	 Specify a place where we should put these filtered logs, it will put only the message coming from docker, which is in JSON format.
 	>  destination <var_name> { file("/var/log/<file_name>.log" template("${MSG}\n")); };
 
- 4. Combining the above three actions into one to generate the output
+ 4. **Combining the above three actions into one to generate the output**
 	Now the final step is to start logging using the above three steps.
 	> log { source(<var_name>); filter(<var_name>); destination(<var_name>); };
 
@@ -93,9 +93,9 @@ Tag option specifies how to format a tag that identifies the container’s log m
 All these steps takes care of configuring syslog-ng. Now we can see the logs being generated for the docker services using the command,
 > tail -f /var/log/<file_name>.log
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3ODUzNzEwOCwxMzI4NzkyMzU2LC0xND
-Q4NjkyOTI0LDE0MjQyNDg2MTQsLTc2NDczNzU2NCwtMTkxMDk3
-NzExOSwtMTAyMjIwNTAwNSwxMDEyMjU5NTEwLC0xMTIxMzkxNz
-I4LDYxODM2NjA4MCwtODgwNTYxOTg3LC00NzIwNTg5MDksLTE3
-NTcwOTExMDEsNDYwNzcxODcwXX0=
+eyJoaXN0b3J5IjpbNTExNjE3MTcsMTMyODc5MjM1NiwtMTQ0OD
+Y5MjkyNCwxNDI0MjQ4NjE0LC03NjQ3Mzc1NjQsLTE5MTA5Nzcx
+MTksLTEwMjIyMDUwMDUsMTAxMjI1OTUxMCwtMTEyMTM5MTcyOC
+w2MTgzNjYwODAsLTg4MDU2MTk4NywtNDcyMDU4OTA5LC0xNzU3
+MDkxMTAxLDQ2MDc3MTg3MF19
 -->
