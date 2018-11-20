@@ -90,63 +90,8 @@ Tag option specifies how to format a tag that identifies the container’s log m
 
 All these steps takes care of configuring syslog-ng. Now we can see the logs being generated for the docker services using the command,
 > tail -f /var/log/<file_name>.log
-
-```
-1.    
-    
-
-# 1. Listening on port 601
-
-source s_network {
-
-network( transport(tcp) port(601));
-
-};
-
-  
-
-# 2. Using the local6 facility, filter the debug level logs
-
-# How did we tell docker to put logs on local6?
-
-# In the bnext_dev_stack.yml file:
-
-# logging:
-
-# driver: syslog
-
-# options:
-
-# syslog-address: "tcp://127.0.0.1:601"
-
-# syslog-facility: "local6"
-
-# tag: "docker-{{.Name}}/{{.ID}}"
-
-filter f_network { facility(local6) and not level(debug); };
-
-  
-
-# 3. Specify a place where we should put these filtered logs
-
-# it will put only the message coming from docker
-
-# which is in JSON format
-
-destination d_network { file("/var/log/bnext.log" template("${MSG}\n")); };
-
-  
-
-# 4. This puts the previous 3 together and executes them
-
-log { source(s_network); filter(f_network); destination(d_network); };
-
-
-```
-> Written with [StackEdit](https://stackedit.io/).
-
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYzOTA1NjQ3MywtMTAyMjIwNTAwNSwxMD
+eyJoaXN0b3J5IjpbLTQzNTUxNTYxNSwtMTAyMjIwNTAwNSwxMD
 EyMjU5NTEwLC0xMTIxMzkxNzI4LDYxODM2NjA4MCwtODgwNTYx
 OTg3LC00NzIwNTg5MDksLTE3NTcwOTExMDEsNDYwNzcxODcwXX
 0=
