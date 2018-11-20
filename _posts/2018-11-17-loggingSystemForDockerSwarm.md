@@ -70,11 +70,12 @@ logging:
   options:
     syslog-facility: "local6"
     syslog-address: "tcp://127.0.0.1:601"
-    tag: "docker-{{.Name}}/{{.ID}}"
+    tag: "{{.ImageName}}-{{.Name}}/{{.ID}}"
 ```
 **Note:**
 So we know syslog facility is the facility we chose from `local0` to `local6`, syslog address is the port where syslog-ng service will be listening, i.e. 601.
 Tag option specifies how to format a tag that identifies the container’s log messages. By default, the system uses the first 12 characters of the container ID.
+- 
 - `{{.ID}}`: The first 12 characters of the container ID
 - `{{.Name}}`: The container name
 
@@ -145,8 +146,8 @@ log { source(s_network); filter(f_network); destination(d_network); };
 > Written with [StackEdit](https://stackedit.io/).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2NTQyMjA0NiwtMTAyMjIwNTAwNSwxMD
-EyMjU5NTEwLC0xMTIxMzkxNzI4LDYxODM2NjA4MCwtODgwNTYx
-OTg3LC00NzIwNTg5MDksLTE3NTcwOTExMDEsNDYwNzcxODcwXX
-0=
+eyJoaXN0b3J5IjpbOTQ0MjA0MDg1LC0xMDIyMjA1MDA1LDEwMT
+IyNTk1MTAsLTExMjEzOTE3MjgsNjE4MzY2MDgwLC04ODA1NjE5
+ODcsLTQ3MjA1ODkwOSwtMTc1NzA5MTEwMSw0NjA3NzE4NzBdfQ
+==
 -->
