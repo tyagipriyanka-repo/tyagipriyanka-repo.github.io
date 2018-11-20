@@ -22,9 +22,9 @@ Using this tool we can keep the logs in a specific location, from where we can r
 1. Run the following command to install,
 	> apt-get install syslog-ng
 
-After running the above command, you should be able to see the syslog service in `/etc` folder with service name as **syslog-ng**, as every service we install manually ***(using apt-get)*** is stored in the `/etc` folder.
+After running the above command, we should be able to see the syslog service in `/etc` folder with service name as **syslog-ng**, as every service we install manually ***(using apt-get)*** is stored in the `/etc` folder.
 
-2. Configure syslog-ng tool as per your requirement by editing the file,
+2. Configure syslog-ng tool as per our requirement by editing the file,
 	> vim /etc/syslog-ng/syslog-ng.conf
    
 3.  Now all that remains is to configure the syslog-ng tool as per our requirement.
@@ -92,8 +92,8 @@ Tag option specifies how to format a tag that identifies the container’s log m
 All these steps takes care of configuring syslog-ng. Now we can see the logs being generated for the docker services using the command,
 > tail -f /var/log/<file_name>.log
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTcxMjkwOTIsLTc2NDczNzU2NCwtMT
-kxMDk3NzExOSwtMTAyMjIwNTAwNSwxMDEyMjU5NTEwLC0xMTIx
-MzkxNzI4LDYxODM2NjA4MCwtODgwNTYxOTg3LC00NzIwNTg5MD
-ksLTE3NTcwOTExMDEsNDYwNzcxODcwXX0=
+eyJoaXN0b3J5IjpbMTQyNDI0ODYxNCwtNzY0NzM3NTY0LC0xOT
+EwOTc3MTE5LC0xMDIyMjA1MDA1LDEwMTIyNTk1MTAsLTExMjEz
+OTE3MjgsNjE4MzY2MDgwLC04ODA1NjE5ODcsLTQ3MjA1ODkwOS
+wtMTc1NzA5MTEwMSw0NjA3NzE4NzBdfQ==
 -->
