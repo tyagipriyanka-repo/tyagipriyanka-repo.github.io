@@ -40,12 +40,13 @@ What needs to be appended is mentioned along with steps, we can append the follo
 	
 	- There are 6 ports available with syslog-ng tool, 
 		 i.e. *601, 602,603,604,605,606*.
-	- We can use upto port 604, eventhough we can mention the same port number for all the services we require the logs for, across all docker-compose.yml files.
+	- We can use upto port 604, keeping in mind we can mention the same port number for all the services that we require the logs for, across all docker-compose.yml files.
 
 1. Interaction between syslog-ng and docker service by filtering out the logs
 	 - There are **facilities** called `local0` to `local7`. 
-	 (where `facility` is the name of the *component* of the system, such as kernel, authentication, and so on.)
+	 (where `facility` is the name of the ***component*** of the system, such as kernel, authentication, and so on.)
 	 - The facilities `local0` to `local7` are ***custom*** unused facilities that syslog provides for the user. Now we want to make the docker services to log to syslog,  hence we can choose to send it to any of the `local#` facilities. 
+	 - Most commonly used facility is **local6**
 	 > filter <var_name> { facility(local6) and not level(debug); };
 	 - Then, we can use `/etc/syslog-ng/syslog-ng.conf` to save the logs being sent to that `local#` to a file, or to send it to a remote server.
  
@@ -132,7 +133,7 @@ That takes care of configuring syslog-ng
 > Written with [StackEdit](https://stackedit.io/).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzAwNzM5MzMsNjE4MzY2MDgwLC04OD
+eyJoaXN0b3J5IjpbLTExMjEzOTE3MjgsNjE4MzY2MDgwLC04OD
 A1NjE5ODcsLTQ3MjA1ODkwOSwtMTc1NzA5MTEwMSw0NjA3NzE4
 NzBdfQ==
 -->
