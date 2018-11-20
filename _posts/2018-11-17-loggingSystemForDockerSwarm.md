@@ -63,7 +63,7 @@ What needs to be appended is mentioned along with steps, we can append the follo
 	 
 ### Configuration for docker services
  - Now we need to tell our docker services to interact wth syslog-ng on the configured port and the filtered out facility.
- - Docker privide us with the option of `logging`. Following is the configuration need to be placed for the docker services we want to view the logs for,
+ - Docker privide us with the option of `logging`. Following is the configuration need to be placed for the docker services we want to view the logs for, in the `docker_stack.yml` file
 ```
 logging:
   driver: syslog
@@ -89,7 +89,7 @@ Tag option specifies how to format a tag that identifies the container’s log m
 	>  service syslog-ng restart
 
 All these steps takes care of configuring syslog-ng. Now we can see the logs being generated for the docker services using the command,
-> 
+> tail -f /var/log/<file_name>.log
 
 ```
 1.    
@@ -146,8 +146,8 @@ log { source(s_network); filter(f_network); destination(d_network); };
 > Written with [StackEdit](https://stackedit.io/).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0ODg3MDg3NjcsLTEwMjIyMDUwMDUsMT
-AxMjI1OTUxMCwtMTEyMTM5MTcyOCw2MTgzNjYwODAsLTg4MDU2
-MTk4NywtNDcyMDU4OTA5LC0xNzU3MDkxMTAxLDQ2MDc3MTg3MF
-19
+eyJoaXN0b3J5IjpbLTYzOTA1NjQ3MywtMTAyMjIwNTAwNSwxMD
+EyMjU5NTEwLC0xMTIxMzkxNzI4LDYxODM2NjA4MCwtODgwNTYx
+OTg3LC00NzIwNTg5MDksLTE3NTcwOTExMDEsNDYwNzcxODcwXX
+0=
 -->
