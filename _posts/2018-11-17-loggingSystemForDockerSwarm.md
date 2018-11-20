@@ -64,18 +64,13 @@ What needs to be appended is mentioned along with steps, we can append the follo
 ### Configuration for docker services
  - Now we need to tell our docker services to interact wth syslog-ng on the configured port and the filtered out facility.
  - Docker privide us with the option of `logging`. Following is the configuration need to be placed for the docker services we want to view the logs for,
- ```
- 2.  touch /var/log/bnext.log
-    
-3.  chown root:adm /var/log/bnext.log
-    
-4.  Restart
-    
-
-1.  service syslog-ng restart
-    
-
-That takes care of configuring syslog-ng
+```
+logging:
+  driver: syslog
+  options:
+    syslog-facility: "local6"
+    syslog-address: "tcp://127.0.0.1:601"
+    tag: "docker-{{.Name}}/{{.ID}}"
 ```
 
 2.  touch /var/log/bnext.log
@@ -145,7 +140,7 @@ log { source(s_network); filter(f_network); destination(d_network); };
 > Written with [StackEdit](https://stackedit.io/).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ5NDM0Njg0OCwxMDEyMjU5NTEwLC0xMT
-IxMzkxNzI4LDYxODM2NjA4MCwtODgwNTYxOTg3LC00NzIwNTg5
-MDksLTE3NTcwOTExMDEsNDYwNzcxODcwXX0=
+eyJoaXN0b3J5IjpbLTEzOTMzMzQ4MzQsMTAxMjI1OTUxMCwtMT
+EyMTM5MTcyOCw2MTgzNjYwODAsLTg4MDU2MTk4NywtNDcyMDU4
+OTA5LC0xNzU3MDkxMTAxLDQ2MDc3MTg3MF19
 -->
