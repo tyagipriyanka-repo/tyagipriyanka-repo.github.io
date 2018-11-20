@@ -82,15 +82,11 @@ Tag option specifies how to format a tag that identifies the container’s log m
 ### Start the syslog-ng service
 
 1.  We need to create the file we've mentioned for the logs to store
-	> touch /var/log/<file_name>.log
-    
-2.  Change the admin 
-3. chown root:adm /var/log/<file_name>.log
-    
-4.  Restart
-   
-
-5.  service syslog-ng restart
+	> touch /var/log/<file_name>.log  
+2.  Change the file owner and group information
+	> chown root:adm /var/log/<file_name>.log
+3.  Restart the syslog-ng service
+	>  service syslog-ng restart
     
 
 That takes care of configuring syslog-ng
@@ -150,8 +146,8 @@ log { source(s_network); filter(f_network); destination(d_network); };
 > Written with [StackEdit](https://stackedit.io/).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1OTM3ODQyLC0xMDIyMjA1MDA1LDEwMT
-IyNTk1MTAsLTExMjEzOTE3MjgsNjE4MzY2MDgwLC04ODA1NjE5
-ODcsLTQ3MjA1ODkwOSwtMTc1NzA5MTEwMSw0NjA3NzE4NzBdfQ
-==
+eyJoaXN0b3J5IjpbLTE1MTk0Nzg2NDYsLTEwMjIyMDUwMDUsMT
+AxMjI1OTUxMCwtMTEyMTM5MTcyOCw2MTgzNjYwODAsLTg4MDU2
+MTk4NywtNDcyMDU4OTA5LC0xNzU3MDkxMTAxLDQ2MDc3MTg3MF
+19
 -->
