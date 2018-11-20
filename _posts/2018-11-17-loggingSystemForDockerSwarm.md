@@ -72,6 +72,9 @@ logging:
     syslog-address: "tcp://127.0.0.1:601"
     tag: "docker-{{.Name}}/{{.ID}}"
 ```
+**Note:**
+So we know syslog facility is the facility we chose from `local0` to `local6`, syslog address is the port where syslog-ng service will be listening, i.e. 601.
+Tag is 
 
 2.  touch /var/log/bnext.log
     
@@ -140,7 +143,7 @@ log { source(s_network); filter(f_network); destination(d_network); };
 > Written with [StackEdit](https://stackedit.io/).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTMzMzQ4MzQsMTAxMjI1OTUxMCwtMT
+eyJoaXN0b3J5IjpbLTEwMjIyMDUwMDUsMTAxMjI1OTUxMCwtMT
 EyMTM5MTcyOCw2MTgzNjYwODAsLTg4MDU2MTk4NywtNDcyMDU4
 OTA5LC0xNzU3MDkxMTAxLDQ2MDc3MTg3MF19
 -->
