@@ -52,7 +52,7 @@ What needs to be appended is mentioned along with steps, we can append the follo
 	 
 	 Then, we can use `/etc/syslog-ng/syslog-ng.conf` to save the logs being sent to that `local#` to a file, or to send it to a remote server.
  
-3.  Storing logs to a specific location
+4.  Storing logs to a specific location
 	 Specify a place where we should put these filtered logs, it will put only the message coming from docker, which is in JSON format.
 	>  destination <var_name> { file("/var/log/<file_name>.log" template("${MSG}\n")); };
 
@@ -93,9 +93,9 @@ Tag option specifies how to format a tag that identifies the container’s log m
 All these steps takes care of configuring syslog-ng. Now we can see the logs being generated for the docker services using the command,
 > tail -f /var/log/<file_name>.log
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NjA4MDQxMDcsMTMyODc5MjM1NiwtMT
-Q0ODY5MjkyNCwxNDI0MjQ4NjE0LC03NjQ3Mzc1NjQsLTE5MTA5
-NzcxMTksLTEwMjIyMDUwMDUsMTAxMjI1OTUxMCwtMTEyMTM5MT
-cyOCw2MTgzNjYwODAsLTg4MDU2MTk4NywtNDcyMDU4OTA5LC0x
-NzU3MDkxMTAxLDQ2MDc3MTg3MF19
+eyJoaXN0b3J5IjpbMTI3ODUzNzEwOCwxMzI4NzkyMzU2LC0xND
+Q4NjkyOTI0LDE0MjQyNDg2MTQsLTc2NDczNzU2NCwtMTkxMDk3
+NzExOSwtMTAyMjIwNTAwNSwxMDEyMjU5NTEwLC0xMTIxMzkxNz
+I4LDYxODM2NjA4MCwtODgwNTYxOTg3LC00NzIwNTg5MDksLTE3
+NTcwOTExMDEsNDYwNzcxODcwXX0=
 -->
