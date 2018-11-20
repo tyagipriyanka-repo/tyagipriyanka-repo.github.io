@@ -61,12 +61,9 @@ What needs to be appended is mentioned along with steps, we can append the follo
 	**Note:**
 	For each port hat we use we need to keep separate variable names for source, filter and destination. As separate ports should be aligned to different facilities.
 	 
-	
+### Configuration for docker services
+  
 
-
-~~. let's begin with understanding why we need logs and how the logging system works~~
-. then introduction of ELK and after that the need of ELK stack
-5 ELK set-up in swarm and how swarm works
 
 ```
 1.    
@@ -133,7 +130,7 @@ That takes care of configuring syslog-ng
 > Written with [StackEdit](https://stackedit.io/).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMjEzOTE3MjgsNjE4MzY2MDgwLC04OD
-A1NjE5ODcsLTQ3MjA1ODkwOSwtMTc1NzA5MTEwMSw0NjA3NzE4
-NzBdfQ==
+eyJoaXN0b3J5IjpbMTAxMjI1OTUxMCwtMTEyMTM5MTcyOCw2MT
+gzNjYwODAsLTg4MDU2MTk4NywtNDcyMDU4OTA5LC0xNzU3MDkx
+MTAxLDQ2MDc3MTg3MF19
 -->
