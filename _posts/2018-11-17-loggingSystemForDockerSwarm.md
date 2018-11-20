@@ -52,7 +52,7 @@ What needs to be appended is mentioned along with steps, we can append the follo
  
  1.  Storing logs to a specific location
 	 - Specify a place where we should put these filtered logs, it will put only the message coming from docker, which is in JSON format.
-	 >  destination <var_name> { file("/var/log/bnext.log" template("${MSG}\n")); };
+	 >  destination <var_name> { file("/var/log/<file_name>.log" template("${MSG}\n")); };
 
  1. Combining the above three actions into one to generate the output
 	- Now the final step is to start logging using the above three steps.
@@ -81,14 +81,16 @@ Tag option specifies how to format a tag that identifies the container’s log m
 
 ### Start the syslog-ng service
 
-2.  touch /var/log/bnext.log
+1.  We need to create the file we've mentioned for the logs to store
+	> touch /var/log/<file_name>.log
     
-3.  chown root:adm /var/log/bnext.log
+2.  Change the admin 
+3. chown root:adm /var/log/<file_name>.log
     
 4.  Restart
-    
+   
 
-1.  service syslog-ng restart
+5.  service syslog-ng restart
     
 
 That takes care of configuring syslog-ng
@@ -148,8 +150,8 @@ log { source(s_network); filter(f_network); destination(d_network); };
 > Written with [StackEdit](https://stackedit.io/).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA5NzM5NzMyOCwtMTAyMjIwNTAwNSwxMD
-EyMjU5NTEwLC0xMTIxMzkxNzI4LDYxODM2NjA4MCwtODgwNTYx
-OTg3LC00NzIwNTg5MDksLTE3NTcwOTExMDEsNDYwNzcxODcwXX
-0=
+eyJoaXN0b3J5IjpbMTI1OTM3ODQyLC0xMDIyMjA1MDA1LDEwMT
+IyNTk1MTAsLTExMjEzOTE3MjgsNjE4MzY2MDgwLC04ODA1NjE5
+ODcsLTQ3MjA1ODkwOSwtMTc1NzA5MTEwMSw0NjA3NzE4NzBdfQ
+==
 -->
