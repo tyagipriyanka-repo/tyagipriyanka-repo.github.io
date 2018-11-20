@@ -62,8 +62,20 @@ What needs to be appended is mentioned along with steps, we can append the follo
 	For each port hat we use we need to keep separate variable names for source, filter and destination. As separate ports should be aligned to different facilities.
 	 
 ### Configuration for docker services
-  
+ - Now we need to tell our docker services to interact wth syslog-ng on the configured port and the filtered out facility.
+ - Docker privide us with the option of `logging`. foll
 
+2.  touch /var/log/bnext.log
+    
+3.  chown root:adm /var/log/bnext.log
+    
+4.  Restart
+    
+
+1.  service syslog-ng restart
+    
+
+That takes care of configuring syslog-ng
 
 ```
 1.    
@@ -120,7 +132,7 @@ log { source(s_network); filter(f_network); destination(d_network); };
 > Written with [StackEdit](https://stackedit.io/).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzg0NjEzNTYxLDEwMTIyNTk1MTAsLTExMj
-EzOTE3MjgsNjE4MzY2MDgwLC04ODA1NjE5ODcsLTQ3MjA1ODkw
-OSwtMTc1NzA5MTEwMSw0NjA3NzE4NzBdfQ==
+eyJoaXN0b3J5IjpbMTQ0MDkzODUwNiwxMDEyMjU5NTEwLC0xMT
+IxMzkxNzI4LDYxODM2NjA4MCwtODgwNTYxOTg3LC00NzIwNTg5
+MDksLTE3NTcwOTExMDEsNDYwNzcxODcwXX0=
 -->
