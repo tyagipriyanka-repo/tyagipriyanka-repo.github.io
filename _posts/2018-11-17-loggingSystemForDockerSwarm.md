@@ -75,6 +75,8 @@ logging:
 **Note:**
 So we know syslog facility is the facility we chose from `local0` to `local6`, syslog address is the port where syslog-ng service will be listening, i.e. 601.
 Tag is 
+- `{{.ID}}`: The first 12 characters of the container ID
+- `{{.Name}}`: The container name
 
 2.  touch /var/log/bnext.log
     
@@ -143,7 +145,8 @@ log { source(s_network); filter(f_network); destination(d_network); };
 > Written with [StackEdit](https://stackedit.io/).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMjIyMDUwMDUsMTAxMjI1OTUxMCwtMT
-EyMTM5MTcyOCw2MTgzNjYwODAsLTg4MDU2MTk4NywtNDcyMDU4
-OTA5LC0xNzU3MDkxMTAxLDQ2MDc3MTg3MF19
+eyJoaXN0b3J5IjpbMTU5NzI5MjgxMiwtMTAyMjIwNTAwNSwxMD
+EyMjU5NTEwLC0xMTIxMzkxNzI4LDYxODM2NjA4MCwtODgwNTYx
+OTg3LC00NzIwNTg5MDksLTE3NTcwOTExMDEsNDYwNzcxODcwXX
+0=
 -->
