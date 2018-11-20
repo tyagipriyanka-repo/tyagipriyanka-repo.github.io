@@ -46,13 +46,14 @@ There are four main components to syslog-ng configuration tool.
 	 (where `facility` is the name of the *component* of the system, such as kernel, authentication, and so on.)
 	 - The facilities `local0` to `local7` are ***custom*** unused facilities that syslog provides for the user. Now we want to make the docker services to log to syslog,  hence we can choose to send it to any of the `local#` facilities. 
 	 > filter <var_name> { facility(local6) and not level(debug); };
-	 - Then, we can use `/etc/syslog.conf` (or `/etc/rsyslog.conf`) to save the logs being sent to that `local#` to a file, or to send it to a remote server.
+	 - Then, we can use `/etc/syslog-ng.conf` (or `/etc/rsyslog.conf`) to save the logs being sent to that `local#` to a file, or to send it to a remote server.
  
  1.  Storing logs to a specific location
 	 - Specify a place where we should put these filtered logs, it will put only the message coming from docker, which is in JSON format.
-	 >  destination d_network { file("/var/log/bnext.log" template("${MSG}\n")); };
+	 >  destination <var_name> { file("/var/log/bnext.log" template("${MSG}\n")); };
 
- - Combining the above three actions into one to generate the output
+ 1. Combining the above three actions into one to generate the output
+-  
 
 Append the following at the bottom of the file before the last line `@include "/etc/syslog-ng/conf.d/*.conf"`
 
@@ -125,7 +126,7 @@ That takes care of configuring syslog-ng
 > Written with [StackEdit](https://stackedit.io/).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1OTM2NjQzMiw2MTgzNjYwODAsLTg4MD
+eyJoaXN0b3J5IjpbMTkzMDk1NTA3Nyw2MTgzNjYwODAsLTg4MD
 U2MTk4NywtNDcyMDU4OTA5LC0xNzU3MDkxMTAxLDQ2MDc3MTg3
 MF19
 -->
