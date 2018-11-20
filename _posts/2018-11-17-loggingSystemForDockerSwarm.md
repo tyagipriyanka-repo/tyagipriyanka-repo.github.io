@@ -79,7 +79,8 @@ Tag option specifies how to format a tag that identifies the container’s log m
 - `{{.ImageName}}`: The name of the image used by the container
 - `{{.Name}}`: The container name
 
-###
+### Start the syslog-ng service
+
 2.  touch /var/log/bnext.log
     
 3.  chown root:adm /var/log/bnext.log
@@ -147,7 +148,7 @@ log { source(s_network); filter(f_network); destination(d_network); };
 > Written with [StackEdit](https://stackedit.io/).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwNjY5NTkxMSwtMTAyMjIwNTAwNSwxMD
+eyJoaXN0b3J5IjpbMTA5NzM5NzMyOCwtMTAyMjIwNTAwNSwxMD
 EyMjU5NTEwLC0xMTIxMzkxNzI4LDYxODM2NjA4MCwtODgwNTYx
 OTg3LC00NzIwNTg5MDksLTE3NTcwOTExMDEsNDYwNzcxODcwXX
 0=
