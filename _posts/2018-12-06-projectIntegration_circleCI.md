@@ -7,6 +7,7 @@ tags: []
 
 ---
 
+## CircleCI integration
 You can directly go onto circleCI website using the link,
 <https://circleci.com/dashboard>
 Follow the steps:
@@ -22,5 +23,5 @@ Follow the steps:
 7. You can see your builds running in the circleCI  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMzQwNTc1MTcsNDMwMDE4NDE5XX0=
+eyJoaXN0b3J5IjpbMjYwMzkwOTIxLDQzMDAxODQxOV19
 -->
