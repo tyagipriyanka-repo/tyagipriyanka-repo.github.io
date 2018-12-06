@@ -1,4 +1,3 @@
-
 ---
 
 title: Integrate your existing project with circleCI 
@@ -23,5 +22,6 @@ Follow the steps:
 7. You can see your builds running in the circleCI  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjYwMzkwOTIxLDQzMDAxODQxOV19
+eyJoaXN0b3J5IjpbLTEyNDg1NjMyMzcsMjYwMzkwOTIxLDQzMD
+AxODQxOV19
 -->
