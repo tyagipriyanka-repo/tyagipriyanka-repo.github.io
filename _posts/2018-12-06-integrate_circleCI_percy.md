@@ -16,8 +16,9 @@ Follow the steps:
 
 3. Select the project you want to integrate with circleCI using the option `Set Up Project` inlined with your local project
 4. Select the operating system and language as per your project's requirement and follow the steps mentioned under `Next Steps` 
-5.  Now after configuring `.circleci` folder and `config.yml` file
+5.  Now after configuring `config.yml` file inside `.circleci` folder for your project, do a commit and go back to circleCI page where you were adding the project, i.e.
+<https://circleci.com/setup-project/gh/username-repo/tyagipriyanka-repo.github.io>
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4NjM2ODc4MywtMjEwODM5NTU5NV19
+eyJoaXN0b3J5IjpbLTUwNDI0NTU0OCwtMjEwODM5NTU5NV19
 -->
