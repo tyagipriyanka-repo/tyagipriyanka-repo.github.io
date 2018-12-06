@@ -11,11 +11,12 @@ You can directly go onto circleCI website using the link,
 <https://circleci.com/dashboard>
 Follow the steps:
 1. Sign up using your github account
-1. Click on `Add Project` from side navigation
+2. Click on `Add Project` from side navigation
 	> On the next page, CircleCi should automatically pull up a list of all your local projects cloned using your github account 
 
-1. Select the project you want to integrate with circleCI using the option ``Set up project
+3. Select the project you want to integrate with circleCI using the option `Set Up Project` inlined with your local project
+4. Select the operating system and language as per your project's requirement and follow the steps menti options to set up your project
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2Njg1ODUyLC0yMTA4Mzk1NTk1XX0=
+eyJoaXN0b3J5IjpbLTUxNjM4OTI5MCwtMjEwODM5NTU5NV19
 -->
