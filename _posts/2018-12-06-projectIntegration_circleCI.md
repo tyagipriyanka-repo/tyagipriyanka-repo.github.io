@@ -1,7 +1,7 @@
 
 ---
 
-title: Integrate github project with CircleCI
+title: Docker Swarm Logging System
 author: priyanka tyagi
 tags: []
 
@@ -24,6 +24,6 @@ Follow the steps:
 7. You can see your builds running in the circleCI  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzNzQ2NzY5MCwyNjAzOTA5MjEsNDMwMD
-E4NDE5XX0=
+eyJoaXN0b3J5IjpbOTExNDYyMDIzLDE4Mzc0Njc2OTAsMjYwMz
+kwOTIxLDQzMDAxODQxOV19
 -->
