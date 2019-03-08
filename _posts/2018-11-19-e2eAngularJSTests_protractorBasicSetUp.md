@@ -13,11 +13,13 @@ Install using the command,
 `npm install protractor -g`
 
 Protractor will be installed on your machine and ready to be run using the  _`protractor <config_file_path>`_  command.
-Protractor's config file, guidebecause to execute tests it is needed to have a config file to guide Protractor on how it should be run.
-There are several parameter options to run  
+Protractor's config file, guides protractor on how to execute tests and how it should be run.
+There are several parameter options to run protractor with, e.g.
+`baseUrl`: to provide URL dynamically at the run-time
+`suite`: run
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyMzM5OTE1NiwtMTUwMzQ4NjAyOSwtMj
+eyJoaXN0b3J5IjpbMTczOTA1MTc3MywtMTUwMzQ4NjAyOSwtMj
 k1MTY1Njk2LC0xNTAzNDg2MDI5LDczMDk5ODExNiw1ODM2MDYx
 MzddfQ==
 -->
