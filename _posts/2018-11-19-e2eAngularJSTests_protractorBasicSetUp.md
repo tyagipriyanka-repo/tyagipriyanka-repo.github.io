@@ -32,18 +32,21 @@ There are many parameters that allow you to setup Protractor. Here are a few tha
 -   **baseURL**: A default URL may be passed to Protractor through the baseURL parameter. That way all calls by Protractor to the browser will use that URL.
 -   **framework**: This can be used to set the test framework and assertions that should be used by Protractor. There are 3 options currently for this parameter: Jasmine, Cucumber and Mocha.
 -   **allScriptsTimeout**: To set up a timeout for each test executed on Protractor. This parameter is used with a number value in milliseconds.
-Similar to these you can incorporate functions like **`onPrepare`**, in order for 
+
+Similar to these you can incorporate functions like **`onPrepare`**, to perform certain actions before executing the tests
+
 All of the parameters are encapsulated in a node object which should be named "config". That way Protractor will identify those parameters inside that object. Below is an example of a Protractor configuration file named _config.js_
 
+```
 exports.config =  { seleniumServerJar:  './node_modules/protractor/selenium/selenium-server-standalone-2.39.0.jar', specs:  [  'tests/hello_world.js'  ],  
  seleniumArgs:  ['-browserTimeout=60'],  'browserName':  'chrome'  }, baseUrl:  'http://localhost:8000', allScriptsTimeout:  30000  };
-
+```
 In this example the parameter seleniumServerJar is used to start the Selenium Server through Protractor. The folder  _tests_  will be executed. The file that contains all of the tests is _hello_world.js_ and it is inside the  _tests_  folder. These tests are going to run against the Chrome browser due the capabilities parameter that is setup with the browserName attribute as '_chrome_'. The timeout to run each test is 30 seconds.
 
 To run the  _config_  file, simply run the command protractor passing  _config.js_  as the parameter. Protractor will run it following the instructions passed in the  _config_  file. However, we will get the following error message, as the  _hello_world.js_  file doesn't exist yet.
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjExODU5NzQzMiwtMTUwMzQ4NjAyOSwtMj
+eyJoaXN0b3J5IjpbMTE4NTIxNzcxMiwtMTUwMzQ4NjAyOSwtMj
 k1MTY1Njk2LC0xNTAzNDg2MDI5LDczMDk5ODExNiw1ODM2MDYx
 MzddfQ==
 -->
