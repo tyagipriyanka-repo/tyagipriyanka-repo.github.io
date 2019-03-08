@@ -86,13 +86,19 @@ In this example the folder  _tests_  will be executed. The file that contains al
 To run the  _config_  file, simply run the command protractor passing  _config.js_  as the parameter. Protractor will run it following the instructions passed in the  _config_  file. 
 
 ### **Step 3 - Creating tests**
+Protractor runs on top of Selenium and because of that it provides all of the benefits Selenium already provides. However what makes Protractor the best test automation framework for AngularJS apps is the customisation that can be done to Protractor directives.
 
+The commands customized by Protractor aim to catch the elements of the application’s interface through AngularJS directives. Thus as you learn Protractor, you automatically learn about AngularJS behaviour and its concepts to render the UI. The converse also holds true - if you know AngularJS, it is easy to learn to use Protractor.
+
+AngularJS uses some specific techniques to manipulate the Document Object Model (DOM), by inserting or extracting information from the HTML. For instance, ng-model is used to input data, binding is used to show data in the DOM and ng-repeat is used to show the information from the HTML of the javascript list in your AngularJS code.
+
+To capture an element in the UI that contains an ng-model for example, Protractor provides the command by.model("name"). Using this command the framework gets a WebElement that contains the ng-model directive with the value "_name_"
 
 
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAzMDE4NDQzNCwtMTUwMzQ4NjAyOSwtMj
+eyJoaXN0b3J5IjpbMTI5Nzk0NDQ3NSwtMTUwMzQ4NjAyOSwtMj
 k1MTY1Njk2LC0xNTAzNDg2MDI5LDczMDk5ODExNiw1ODM2MDYx
 MzddfQ==
 -->
