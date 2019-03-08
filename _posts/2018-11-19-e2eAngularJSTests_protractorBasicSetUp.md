@@ -38,7 +38,28 @@ Similar to these you can incorporate functions like **`onPrepare`**, to perform 
 All of the parameters are encapsulated in a node object which should be named "config". That way Protractor will identify those parameters inside that object. Below is an example of a Protractor configuration file named _config.js_
 
 ```
-exports.config =  { seleniumServerJar:  './node_modules/protractor/selenium/selenium-server-standalone-2.39.0.jar', specs:  [  'tests/hello_world.js'  ],  
+exports.config =  
+{ 
+	onPrepare:  function () {
+		setTimeout(function () {
+		var  x  =  0, y  =  0;
+		browser.driver.manage().window().setPosition(x, y);
+		browser.driver.executeScript(function () {
+			return {
+				width:  window.screen.availWidth,
+				height:  window.screen.availHeight
+			};
+	}).then(function (result) {
+
+browser.driver.manage().window().setSize(result.width, result.height);
+
+});
+
+});
+
+},
+
+seleniumServerJar:  './node_modules/protractor/selenium/selenium-server-standalone-2.39.0.jar', specs:  [  'tests/hello_world.js'  ],  
  seleniumArgs:  ['-browserTimeout=60'],  'browserName':  'chrome'  }, baseUrl:  'http://localhost:8000', allScriptsTimeout:  30000  };
 ```
 In this example the parameter seleniumServerJar is used to start the Selenium Server through Protractor. The folder  _tests_  will be executed. The file that contains all of the tests is _hello_world.js_ and it is inside the  _tests_  folder. These tests are going to run against the Chrome browser due the capabilities parameter that is setup with the browserName attribute as '_chrome_'. The timeout to run each test is 30 seconds.
@@ -46,7 +67,7 @@ In this example the parameter seleniumServerJar is used to start the Selenium Se
 To run the  _config_  file, simply run the command protractor passing  _config.js_  as the parameter. Protractor will run it following the instructions passed in the  _config_  file. However, we will get the following error message, as the  _hello_world.js_  file doesn't exist yet.
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4NTIxNzcxMiwtMTUwMzQ4NjAyOSwtMj
-k1MTY1Njk2LC0xNTAzNDg2MDI5LDczMDk5ODExNiw1ODM2MDYx
-MzddfQ==
+eyJoaXN0b3J5IjpbLTE3MzA3MzI2NjQsLTE1MDM0ODYwMjksLT
+I5NTE2NTY5NiwtMTUwMzQ4NjAyOSw3MzA5OTgxMTYsNTgzNjA2
+MTM3XX0=
 -->
