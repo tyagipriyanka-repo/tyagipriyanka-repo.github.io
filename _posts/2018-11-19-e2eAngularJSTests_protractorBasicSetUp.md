@@ -23,7 +23,7 @@ All these options can be explored using the command, `protractor --help`
 There are many parameters that allow you to setup Protractor. Here are a few that are the most important in my opinion:
 
 -   **SeleniumAddress**: This allows you provide a URL to the Selenium Server that Protractor will use to execute tests. In this case Selenium Server must be previously started to be able to run tests on Protractor.
--   **SeleniumServerJar**: This allows you provide the file path of the  _SeleniumServer.jar_ file. This parameter will be used by Protractor to control the Selenium life cycle. That way it is not necessary to start and stop the Selenium Server to run Protractor.
+-   **directConnect**: This way it is not necessary to start and stop the Selenium Server to run Protractor.
 -   **SauceUser** and **SauceKey**: When this parameter is used, Protractor will ignore the SeleniumServerJar parameter and will run tests against the Selenium Server in [SauceLabs](https://saucelabs.com/).
 -   **Specs**: An array of test files can be sent through the specs parameter for Protractor to execute. The path of the test files must be relative to the config file.
 -   **seleniumArgs**: This allows you to pass a parameter to Selenium if SeleniumServerJar is being used.
@@ -42,7 +42,7 @@ In this example the parameter seleniumServerJar is used to start the Selenium Se
 To run the  _config_  file, simply run the command protractor passing  _config.js_  as the parameter. Protractor will run it following the instructions passed in the  _config_  file. However, we will get the following error message, as the  _hello_world.js_  file doesn't exist yet.
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTI3NTIwMDY4LC0xNTAzNDg2MDI5LC0yOT
-UxNjU2OTYsLTE1MDM0ODYwMjksNzMwOTk4MTE2LDU4MzYwNjEz
-N119
+eyJoaXN0b3J5IjpbMTUzODYyNjI5NywtMTUwMzQ4NjAyOSwtMj
+k1MTY1Njk2LC0xNTAzNDg2MDI5LDczMDk5ODExNiw1ODM2MDYx
+MzddfQ==
 -->
