@@ -8,9 +8,7 @@ tags: []
 
 ## Protractor
 ### **Step 1 - Installing**
-
-Install using the command,
-`npm install protractor -g`
+Install using the command, `npm install protractor -g`
 
 Protractor will be installed on your machine and ready to be run using the  _`protractor <config_file_path>`_  command.
 Protractor's config file, guides protractor on how to execute tests and how it should be run.
@@ -18,8 +16,7 @@ There are several parameter options to run protractor with, e.g.
 `--baseUrl`: to provide URL dynamically at the run-time
 `--specs`:  Comma-separated list of files to test
 `--exclude`:  Comma-separated list of files to exclude
-All these options can be explored using the command,
-`protractor --help`
+All these options can be explored using the command, `protractor --help`
 
 ### **Step 2 - Setting up**
 
@@ -45,7 +42,7 @@ In this example the parameter seleniumServerJar is used to start the Selenium Se
 To run the  _config_  file, simply run the command protractor passing  _config.js_  as the parameter. Protractor will run it following the instructions passed in the  _config_  file. However, we will get the following error message, as the  _hello_world.js_  file doesn't exist yet.
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1OTc4MDQxNCwtMTUwMzQ4NjAyOSwtMj
-k1MTY1Njk2LC0xNTAzNDg2MDI5LDczMDk5ODExNiw1ODM2MDYx
-MzddfQ==
+eyJoaXN0b3J5IjpbOTI3NTIwMDY4LC0xNTAzNDg2MDI5LC0yOT
+UxNjU2OTYsLTE1MDM0ODYwMjksNzMwOTk4MTE2LDU4MzYwNjEz
+N119
 -->
