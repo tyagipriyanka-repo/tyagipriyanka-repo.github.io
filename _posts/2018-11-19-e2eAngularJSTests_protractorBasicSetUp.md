@@ -49,25 +49,25 @@ exports.config =
 				width:  window.screen.availWidth,
 				height:  window.screen.availHeight
 			};
-	}).then(function (result) {
-
-browser.driver.manage().window().setSize(result.width, result.height);
-
-});
-
-});
-
+		}).then(function (result) {
+			browser.driver.manage().window().setSize(result.width, result.height);
+		});
+	});
 },
 
-seleniumServerJar:  './node_modules/protractor/selenium/selenium-server-standalone-2.39.0.jar', specs:  [  'tests/hello_world.js'  ],  
- seleniumArgs:  ['-browserTimeout=60'],  'browserName':  'chrome'  }, baseUrl:  'http://localhost:8000', allScriptsTimeout:  30000  };
+specs:  [  'tests/hello_world.js'  ],  
+seleniumArgs:  ['-browserTimeout=60'],  
+'browserName':  'chrome'  }, 
+baseUrl:  'http://localhost:8000', 
+allScriptsTimeout:  30000  
+};
 ```
 In this example the parameter seleniumServerJar is used to start the Selenium Server through Protractor. The folder  _tests_  will be executed. The file that contains all of the tests is _hello_world.js_ and it is inside the  _tests_  folder. These tests are going to run against the Chrome browser due the capabilities parameter that is setup with the browserName attribute as '_chrome_'. The timeout to run each test is 30 seconds.
 
 To run the  _config_  file, simply run the command protractor passing  _config.js_  as the parameter. Protractor will run it following the instructions passed in the  _config_  file. However, we will get the following error message, as the  _hello_world.js_  file doesn't exist yet.
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MzA3MzI2NjQsLTE1MDM0ODYwMjksLT
+eyJoaXN0b3J5IjpbLTEwNDYxMjMxNzgsLTE1MDM0ODYwMjksLT
 I5NTE2NTY5NiwtMTUwMzQ4NjAyOSw3MzA5OTgxMTYsNTgzNjA2
 MTM3XX0=
 -->
