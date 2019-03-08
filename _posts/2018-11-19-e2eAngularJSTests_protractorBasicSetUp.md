@@ -81,12 +81,18 @@ exports.config =
 	allScriptsTimeout:  30000  
 	};
 ```
-In this example the parameter seleniumServerJar is used to start the Selenium Server through Protractor. The folder  _tests_  will be executed. The file that contains all of the tests is _hello_world.js_ and it is inside the  _tests_  folder. These tests are going to run against the Chrome browser due the capabilities parameter that is setup with the browserName attribute as '_chrome_'. The timeout to run each test is 30 seconds.
+In this example the folder  _tests_  will be executed. The file that contains all of the tests is _hello_world.js_ and it is inside the  _tests_  folder. These tests are going to run against the Chrome browser due the capabilities parameter that is setup with the browserName attribute as '_chrome_'. The timeout to run each test is 30 seconds.
 
-To run the  _config_  file, simply run the command protractor passing  _config.js_  as the parameter. Protractor will run it following the instructions passed in the  _config_  file. However, we will get the following error message, as the  _hello_world.js_  file doesn't exist yet.
+To run the  _config_  file, simply run the command protractor passing  _config.js_  as the parameter. Protractor will run it following the instructions passed in the  _config_  file. 
+
+### **Step 3 - Creating tests**
+
+
+
+
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDcxMjEwODIxLC0xNTAzNDg2MDI5LC0yOT
-UxNjU2OTYsLTE1MDM0ODYwMjksNzMwOTk4MTE2LDU4MzYwNjEz
-N119
+eyJoaXN0b3J5IjpbMjAzMDE4NDQzNCwtMTUwMzQ4NjAyOSwtMj
+k1MTY1Njk2LC0xNTAzNDg2MDI5LDczMDk5ODExNiw1ODM2MDYx
+MzddfQ==
 -->
