@@ -15,13 +15,15 @@ Install using the command,
 Protractor will be installed on your machine and ready to be run using the  _`protractor <config_file_path>`_  command.
 Protractor's config file, guides protractor on how to execute tests and how it should be run.
 There are several parameter options to run protractor with, e.g.
-`baseUrl`: to provide URL dynamically at the run-time
-`suite`: to run few of the tests files
+`--baseUrl`: to provide URL dynamically at the run-time
+`--specs`:  Comma-separated list of files to test
+`--exclude`:  Comma-separated list of files to exclude
 All these options can be explored using the command,
 `protractor --help`
+
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM5MDY4NTk2NSwtMTUwMzQ4NjAyOSwtMj
-k1MTY1Njk2LC0xNTAzNDg2MDI5LDczMDk5ODExNiw1ODM2MDYx
-MzddfQ==
+eyJoaXN0b3J5IjpbLTEwODIwNTkyMTcsLTE1MDM0ODYwMjksLT
+I5NTE2NTY5NiwtMTUwMzQ4NjAyOSw3MzA5OTgxMTYsNTgzNjA2
+MTM3XX0=
 -->
