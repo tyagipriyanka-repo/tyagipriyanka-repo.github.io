@@ -23,8 +23,7 @@ All these options can be explored using the command, `protractor --help`
 There are many parameters that allow you to setup Protractor. Here are a few that are the most important in my opinion:
 
 -   **SeleniumAddress**: This allows you provide a URL to the Selenium Server that Protractor will use to execute tests. In this case Selenium Server must be previously started to be able to run tests on Protractor.
--   **directConnect**: This way it is not necessary to start and stop the Selenium Server to run Protractor.
--   **SauceUser** and **SauceKey**: When this parameter is used, Protractor will ignore the SeleniumServerJar parameter and will run tests against the Selenium Server in [SauceLabs](https://saucelabs.com/).
+-   **directConnect**: If set this parameter is set to true then, this way it is not necessary to start and stop the Selenium Server to run Protractor.
 -   **Specs**: An array of test files can be sent through the specs parameter for Protractor to execute. The path of the test files must be relative to the config file.
 -   **seleniumArgs**: This allows you to pass a parameter to Selenium if SeleniumServerJar is being used.
 -   **capabilities**: Parameters also can be passed to the WebDriver using the capabilities parameter. It should contain the browser against which Protractor should run the tests.
@@ -42,7 +41,7 @@ In this example the parameter seleniumServerJar is used to start the Selenium Se
 To run the  _config_  file, simply run the command protractor passing  _config.js_  as the parameter. Protractor will run it following the instructions passed in the  _config_  file. However, we will get the following error message, as the  _hello_world.js_  file doesn't exist yet.
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUzODYyNjI5NywtMTUwMzQ4NjAyOSwtMj
-k1MTY1Njk2LC0xNTAzNDg2MDI5LDczMDk5ODExNiw1ODM2MDYx
-MzddfQ==
+eyJoaXN0b3J5IjpbLTE4Njc2ODE2MjIsLTE1MDM0ODYwMjksLT
+I5NTE2NTY5NiwtMTUwMzQ4NjAyOSw3MzA5OTgxMTYsNTgzNjA2
+MTM3XX0=
 -->
