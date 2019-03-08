@@ -40,6 +40,7 @@ All of the parameters are encapsulated in a node object which should be named "c
 ```
 exports.config =  
 { 
+	directConnect:  false,
 	onPrepare:  function () {
 		setTimeout(function () {
 		var  x  =  0, y  =  0;
@@ -55,6 +56,13 @@ exports.config =
 	});
 },
 	specs:  [  'tests/hello_world.js'  ],  
+	framework:  'jasmine2',
+	params: {
+	//
+	},
+    suites: {
+    //
+    },
 	multiCapabilities: [
 	{
 		'browserName':  'chrome',
@@ -78,7 +86,7 @@ In this example the parameter seleniumServerJar is used to start the Selenium Se
 To run the  _config_  file, simply run the command protractor passing  _config.js_  as the parameter. Protractor will run it following the instructions passed in the  _config_  file. However, we will get the following error message, as the  _hello_world.js_  file doesn't exist yet.
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTczMTQwODQ1LC0xNTAzNDg2MDI5LC0yOT
+eyJoaXN0b3J5IjpbNDcxMjEwODIxLC0xNTAzNDg2MDI5LC0yOT
 UxNjU2OTYsLTE1MDM0ODYwMjksNzMwOTk4MTE2LDU4MzYwNjEz
 N119
 -->
