@@ -52,9 +52,9 @@ exports.config =
 			};
 		}).then(function (result) {
 			browser.driver.manage().window().setSize(result.width, result.height);
+			});
 		});
-	});
-},
+	},
 	specs:  [  'tests/hello_world.js'  ],  
 	framework:  'jasmine2',
 	params: {
@@ -79,7 +79,7 @@ exports.config =
 	], 
 	baseUrl:  'http://localhost:8000', 
 	allScriptsTimeout:  30000  
-	};
+};
 ```
 In this example the folder  _tests_  will be executed. The file that contains all of the tests is _hello_world.js_ and it is inside the  _tests_  folder. These tests are going to run against the Chrome browser due the capabilities parameter that is setup with the browserName attribute as '_chrome_'. The timeout to run each test is 30 seconds.
 
@@ -102,7 +102,7 @@ Using these commands the framework gets a WebElement that contains the `ng-model
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MzI0MTA3MzksLTE1MDM0ODYwMjksLT
-I5NTE2NTY5NiwtMTUwMzQ4NjAyOSw3MzA5OTgxMTYsNTgzNjA2
-MTM3XX0=
+eyJoaXN0b3J5IjpbLTEwOTcxNTMzMzEsLTE0MzI0MTA3MzksLT
+E1MDM0ODYwMjksLTI5NTE2NTY5NiwtMTUwMzQ4NjAyOSw3MzA5
+OTgxMTYsNTgzNjA2MTM3XX0=
 -->
