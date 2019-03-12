@@ -7,6 +7,9 @@ tags: []
 ---
 
 ## Protractor
+
+[Protractor](http://protractortest.org/) is an end-to-end test framework for Angular and AngularJS applications. It is a [Node.js](http://nodejs.org/) program built on top of [WebDriverJS](https://github.com/SeleniumHQ/selenium/wiki/WebDriverJs). It runs tests against your application running in a real browser, interacting with it as a user would.
+
 ### **Step 1 - Installing**
 Install using the command, `npm install protractor -g`
 
@@ -102,7 +105,7 @@ Using these commands the framework gets a WebElement that contains the `ng-model
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTcxNTMzMzEsLTE0MzI0MTA3MzksLT
-E1MDM0ODYwMjksLTI5NTE2NTY5NiwtMTUwMzQ4NjAyOSw3MzA5
-OTgxMTYsNTgzNjA2MTM3XX0=
+eyJoaXN0b3J5IjpbLTgyMzQ1NzA3NCwtMTA5NzE1MzMzMSwtMT
+QzMjQxMDczOSwtMTUwMzQ4NjAyOSwtMjk1MTY1Njk2LC0xNTAz
+NDg2MDI5LDczMDk5ODExNiw1ODM2MDYxMzddfQ==
 -->
